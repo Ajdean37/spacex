@@ -1,0 +1,23 @@
+{
+  "name": "spacex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ajdean37/spacex.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ajdean37/spacex/issues"
+  },
+  "homepage": "https://github.com/Ajdean37/spacex#readme",
+  "dependencies": {
+    "axios": "^0.26.1"
+  }
+}

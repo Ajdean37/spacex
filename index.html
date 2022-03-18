@@ -6,401 +6,43 @@
     <title>SpaceX</title>
 </head>
 <body>
-  <div id="root">
+  <div>
     <div class="header"><h1>SpaceX Launches</h1></div>
 
-    <table class="table table-hover"">
+    <button id="testAppendBtn">Append table row</button>
+
+
+    <table class="table table-hover">
 
       <div class="tableFilter">
-        <i class="fa-solid fa-arrows-rotate refresh"></i>
+        <i id="refresh" class="fa-solid fa-arrows-rotate refresh"></i>
         <form class="form">
           <button id="checkboxSuccess"></button>
           <p class="inline">Land Success</p>
           <button id="checkboxReuse"></button>
           <p class="inline">Reuse</p>
-          <button id="checkboxReuse"></button>
+          <button id="checkboxReddit"></button>
           <p class="inline">With Reddit</p>
         </form>
       </div>
 
-      <div class="title">
         <thead>
         <tr>
           <th scope="col">Badge</th>
           <th scope="col">Rocket Name</th>
-          <th scope="col">Rocket Type</th>
+          <th scope="col">Upcoming</th>
           <th scope="col">Launch Date</th>
           <th scope="col">Details</th>
-          <th scope="col">ID</th>
+          <th scope="col">Flight #</th>
           <th scope="col">Article</th>
         </tr>
         </thead>
-      </div>
 
-      <div class="flight1">
-        <tbody>
-        <tr>
-          <th scope="row"><img src="https://images2.imgbox.com/3c/0e/T8iJcSN3_o.png" alt=falconSat height="25px"></td>
-          <td>FalconSat</td>
-          <td>Merlin A</td>
-          <td>03/24/2006</td>
-          <td>Engine failure at 33 seconds and loss of vehicle</td>
-          <td>1</td>
-          <td id="id1"><i class="fa-solid fa-link"></i><a href="https://www.space.com/2196-spacex-inaugural-falcon-1-rocket-lost-launch.html"></a></td>
-        </tr>
-      </div>
+        <tbody id="table-body-target">
 
-      <div class="flight">
-        <tr>
-          <th scope="row"><img src="https://images2.imgbox.com/4f/e3/I0lkuJ2e_o.png" alt="demoSat" height="25px"></td>
-          <td>DemoSat</td>
-          <td>Merlin A</td>
-          <td>03/20/2007</td>
-          <td>Successful first stage burn and transition to s...</td>
-          <td>2</td>
-          <td><i class="fa-solid fa-link"></i></td>
-        </tr>
-      </div>
-
-      <div class="flight">
-        <tr>
-          <th scope="row"><img src="https://images2.imgbox.com/4f/e3/I0lkuJ2e_o.png" alt="trailblazer" height="25px"></td>
-          <td>Trailblazer</td>
-          <td>Merlin C</td>
-          <td>08/02/2008</td>
-          <td>Residual stage 1 thrust led to collision betwee...</td>
-          <td>3</td>
-          <td><i class="fa-solid fa-link"></i></td>
-        </tr>
-      </div>
-
-      <div class="flight">
-        <tr>
-          <th scope="row"><img src="https://images2.imgbox.com/e9/c9/T8CfiSYb_o.png" alt="ratSat" height="25px"></td>
-          <td>RatSat</td>
-          <td>Merlin C</td>
-          <td>09/28/2008</td>
-          <td>Ratsat was carried to orbit on the first success</td>
-          <td>4</td>
-          <td><i class="fa-solid fa-link"></i></td>
-        </tr>
-      </div>
-
-      <div class="flight">
-        <tr>
-          <th scope="row"><img src="https://images2.imgbox.com/a7/ba/NBZSw3Ho_o.png" alt="razakSat" height="25px"></td>
-          <td>RazakSat</td>
-          <td>Merlin C</td>
-          <td>07/12/2009</td>
-          <td>No details provided</td>
-          <td>5</td>
-          <td><i class="fa-solid fa-link"></i></td>
-        </tr>
-      </div>
-
-      <div class="flight">
-        <tr>
-          <th scope="row"><img src="https://images2.imgbox.com/5c/36/gbDKf6Y7_o.png" alt="falcon9" height="25px"></td>
-          <td>Falcon 9 Test Flight</td>
-          <td>v1.0</td>
-          <td>06/04/2010</td>
-          <td>No details provided</td>
-          <td>6</td>
-          <td><i class="fa-solid fa-link"></i></td>
-        </tr>
-      </div>
-
-      <div class="flight">
-        <tr>
-          <th scope="row"><img src="https://images2.imgbox.com/d9/3e/FfrN88ry_o.png" alt="cots1" height="25px"></td>
-          <td>COTS 1</td>
-          <td>v1.0</td>
-          <td>12/08/2010</td>
-          <td>No details provided</td>
-          <td>7</td>
-          <td><i class="fa-solid fa-link"></i></td>
-        </tr>
-      </div>
-
-      <div class="flight">
-        <tr>
-          <th scope="row"><img src="https://images2.imgbox.com/fc/7a/r9ITwL12_o.png" alt="cots2" height="25px"></td>
-          <td>COTS 2</td>
-          <td>v1.0</td>
-          <td>05/22/2012</td>
-          <td>Launch was scrubbed on first attempt, second la...</td>
-          <td>8</td>
-          <td><i class="fa-solid fa-link"></i></td>
-        </tr>
-      </div>
-
-      <div class="flight">
-        <tr>
-          <th scope="row"><img src="https://images2.imgbox.com/0b/33/2eLGEejP_o.png" alt="crs1" height="25px"></td>
-          <td>CRS-1</td>
-          <td>v1.0</td>
-          <td>10/07/2012</td>
-          <td>CRS-1 successful, but the secondary payload was...</td>
-          <td>9</td>
-          <td><i class="fa-solid fa-link"></i></td>
-        </tr>
-      </div>
-
-      <div class="flight">
-        <tr>
-          <th scope="row"><img src="https://images2.imgbox.com/1b/b6/Z4oktZeR_o.png" alt="crs2" height="25px"></td>
-          <td>CRS-2</td>
-          <td>v1.0</td>
-          <td>03/01/2013</td>
-          <td>Last launch of the original Falcon 9 v1.0 launch...</td>
-          <td>10</td>
-          <td><i class="fa-solid fa-link"></i></td>
-        </tr>
-      </div>
-
-      <div class="flight">
-        <tr>
-          <th scope="row"><img src="https://images2.imgbox.com/91/27/VhC1TTYN_o.png" alt="cassiope" height="25px"></td>
-          <td>CASSIOPE</td>
-          <td>v1.0</td>
-          <td>09/29/2013</td>
-          <td>Commercial mission and first Falcon 9 v1.1 flig...</td>
-          <td>11</td>
-          <td><i class="fa-solid fa-link"></i></td>
-        </tr>
-      </div>
-
-      <div class="flight">
-        <tr>
-          <th scope="row"><img src="https://images2.imgbox.com/42/b0/vP0sk3d5_o.png" alt="ses8" height="25px"></td>
-          <td>SES-8</td>
-          <td>v1.1</td>
-          <td>12/03/2013</td>
-          <td>First GTO launch for Falcon 9</td>
-          <td>12</td>
-          <td><i class="fa-solid fa-link"></i></td>
-        </tr>
-      </div>
-
-      <div class="flight">
-        <tr>
-          <th scope="row"><img src="https://images2.imgbox.com/d8/6d/fnqIBEJh_o.png" alt="thaicom" height="25px"></td>
-          <td>Thaicom 6</td>
-          <td>v1.1</td>
-          <td>01/06/2014</td>
-          <td>Second GTO launch for Falcon 9. The USAF evalua...</td>
-          <td>13</td>
-          <td><i class="fa-solid fa-link"></i></td>
-        </tr>
-      </div>
-
-      <div class="flight">
-        <tr>
-          <th scope="row"><img src="https://images2.imgbox.com/a0/cb/s1h2RuR0_o.png" alt="crs3" height="25px"></td>
-          <td>CRS-3</td>
-          <td>v1.1</td>
-          <td>04/18/2014</td>
-          <td>Following second-stage separation, SpaceX condu...</td>
-          <td>14</td>
-          <td><i class="fa-solid fa-link"></i></td>
-        </tr>
-      </div>
-
-      <div class="flight">
-        <tr>
-          <th scope="row"><img src="https://images2.imgbox.com/a7/b4/bcMrHMey_o.png" alt="og2" height="25px"></td>
-          <td>OG-2 Mission 1</td>
-          <td>v1.1</td>
-          <td>07/14/2014</td>
-          <td>Total payload mass was 1,316 kg (2,901 lb) : 6 ...</td>
-          <td>15</td>
-          <td><i class="fa-solid fa-link"></i></td>
-        </tr>
-      </div>
-
-      <div class="flight">
-        <tr>
-          <th scope="row"><img src="https://images2.imgbox.com/bf/12/oSP2EwNz_o.png" alt="asaiSat8" height="25px"></td>
-          <td>AsiaSat 8</td>
-          <td>v1.1</td>
-          <td>08/05/2014</td>
-          <td>No details provided</td>
-          <td>16</td>
-          <td><i class="fa-solid fa-link"></i></td>
-        </tr>
-      </div>
-
-      <div class="flight">
-        <tr>
-          <th scope="row"><img src="https://images2.imgbox.com/6f/c0/D3Owbmpo_o.png" alt="asiaSat6" height="25px"></td>
-          <td>AsiaSat 6</td>
-          <td>v1.1</td>
-          <td>09/07/2014</td>
-          <td>No details provided</td>
-          <td>17</td>
-          <td><i class="fa-solid fa-link"></i></td>
-        </tr>
-      </div>
-
-      <div class="flight">
-        <tr>
-          <th scope="row"><img src="https://images2.imgbox.com/b4/28/cQwcs8qz_o.png" alt="crs4" height="25px"></td>
-          <td>CRS-4</td>
-          <td>v1.1</td>
-          <td>09/21/2014</td>
-          <td>No details provided</td>
-          <td>18</td>
-          <td><i class="fa-solid fa-link"></i></td>
-        </tr>
-      </div>
-
-      <div class="flight">
-        <tr>
-          <th scope="row"><img src="https://images2.imgbox.com/25/b6/RhNppyL3_o.png" alt="crs5" height="25px"></td>
-          <td>CRS-5</td>
-          <td>v1.1</td>
-          <td>01/10/2015</td>
-          <td>Following second stage separation, SpaceX perfo...</td>
-          <td>19</td>
-          <td><i class="fa-solid fa-link"></i></td>
-        </tr>
-      </div>
-
-      <div class="flight">
-        <tr>
-          <th scope="row"><img src="https://images2.imgbox.com/63/c5/0OIpD59z_o.png" alt="dscovr" height="25px"></td>
-          <td>DSCOVR</td>
-          <td>v1.1</td>
-          <td>02/11/2015</td>
-          <td>First launch under USAF's OSP 3 launch contract...</td>
-          <td>20</td>
-          <td><i class="fa-solid fa-link"></i></td>
-        </tr>
-      </div>
-
-      <div class="flight">
-        <tr>
-          <th scope="row"><img src="https://images2.imgbox.com/20/10/sqPgZfej_o.png" alt="abs3a" height="25px"></td>
-          <td>ABS-3A / Eutelsat 115W B</td>
-          <td>v1.1</td>
-          <td>03/01/2015</td>
-          <td>The launch was Boeing's first-ever conjoined la...</td>
-          <td>21</td>
-          <td><i class="fa-solid fa-link"></i></td>
-        </tr>
-      </div>
-
-      <div class="flight">
-        <tr>
-          <th scope="row"><img src="https://images2.imgbox.com/3d/55/kbVulokl_o.png" alt="crs6" height="25px"></td>
-          <td>CRS-6</td>
-          <td>v1.1</td>
-          <td>004/14/2015</td>
-          <td>Following the first-stage boost, SpaceX attempt...</td>
-          <td>22</td>
-          <td><i class="fa-solid fa-link"></i></td>
-        </tr>
-      </div>
-
-      <div class="flight">
-        <tr>
-          <th scope="row"><img src="https://images2.imgbox.com/c9/35/VNpbqUPb_o.png" alt="turkmen" height="25px"></td>
-          <td>TürkmenÄlem 52°E / MonacoSAT</td>
-          <td>v1.1</td>
-          <td>04/27/2015</td>
-          <td>No details provided</td>
-          <td>23</td>
-          <td><i class="fa-solid fa-link"></i></td>
-        </tr>
-      </div>
-
-      <div class="flight">
-        <tr>
-          <th scope="row"><img src="https://images2.imgbox.com/d0/22/gyTVYo21_o.png" alt="crs7" height="25px"></td>
-          <td>CRS-7</td>
-          <td>v1.1</td>
-          <td>06/28/2015</td>
-          <td>Launch performance was nominal until an overpre...</td>
-          <td>24</td>
-          <td><i class="fa-solid fa-link"></i></td>
-        </tr>
-      </div>
-
-      <div class="flight">
-        <tr>
-          <th scope="row"><img src="https://images2.imgbox.com/89/e8/5eeThzqZ_o.png" alt="og2" height="25px"></td>
-          <td>OG-2 Mission 2</td>
-          <td>FT</td>
-          <td>12/21/2015</td>
-          <td>Total payload mass was 2,034 kg (4,484 lb) : 11...</td>
-          <td>25</td>
-          <td><i class="fa-solid fa-link"></i></td>
-        </tr>
-      </div>
-
-      <div class="flight">
-        <tr>
-          <th scope="row"><img src="https://images2.imgbox.com/72/f2/uK9vYzvk_o.png" alt="jason3" height="25px"></td>
-          <td>Jason 3</td>
-          <td>v1.1</td>
-          <td>01/17/2016</td>
-          <td>First launch of NASA and NOAA joint science mis...</td>
-          <td>26</td>
-          <td><i class="fa-solid fa-link"></i></td>
-        </tr>
-      </div>
-
-      <div class="flight">
-        <tr>
-          <th scope="row"><img src="https://images2.imgbox.com/fa/ef/4FBvVReu_o.png" alt="ses9" height="25px"></td>
-          <td>SES-9</td>
-          <td>FT</td>
-          <td>03/04/2016</td>
-          <td>Second launch of the enhanced Falcon 9 Full Thr...</td>
-          <td>27</td>
-          <td><i class="fa-solid fa-link"></i></td>
-        </tr>
-      </div>
-
-      <div class="flight">
-        <tr>
-          <th scope="row"><img src="https://images2.imgbox.com/49/2a/gkSR50yc_o.png" alt="crs8" height="25px"></td>
-          <td>CRS-8</td>
-          <td>FT</td>
-          <td>04/08/2016</td>
-          <td>Dragon carried over 1500 kg of supplies and del...</td>
-          <td>28</td>
-          <td><i class="fa-solid fa-link"></i></td>
-        </tr>
-      </div>
-
-      <div class="flight">
-        <tr>
-          <th scope="row"><img src="https://images2.imgbox.com/87/c9/qViUTdt5_o.png" alt="jcsat" height="25px"></td>
-          <td>JCSAT-2B</td>
-          <td>FT</td>
-          <td>05/06/2016</td>
-          <td>Launched the JCSAT 14 communications satellite ...</td>
-          <td>29</td>
-          <td><i class="fa-solid fa-link"></i></td>
-        </tr>
-      </div>
-
-      <div class="flight">
-        <tr>
-          <th scope="row"><img src="https://images2.imgbox.com/d1/de/waYRCanq_o.png" alt="thaicom" height="25px"></td>
-          <td>Thaicom 8</td>
-          <td>FT</td>
-          <td>05/27/2016</td>
-          <td>Manufactured by Orbital ATK, the 3,100-kilogram...</td>
-          <td>30</td>
-          <td><i class="fa-solid fa-link"></i></td>
-        </tr>
         </tbody>
-      </div>
 
-    </table>
-
+      </table>
   </div> 
   
   <script src="https://kit.fontawesome.com/996e491d30.js" crossorigin="anonymous"></script>
