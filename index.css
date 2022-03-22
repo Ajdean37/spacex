@@ -43,15 +43,16 @@ body {
     flex-direction: row;
     justify-content: space-evenly;
     border: 1px solid black;  
-    margin-left: 100px;
-    margin-right: 100px;  
+    /* margin-left: 100px;
+    margin-right: 100px;   */
     border-radius: 5px;
 }
 
 .table {
     border: 1px solid black;
-    margin-left: 100px;
-    margin-right: 100px;
+    /* margin-left: 100px;
+    margin-right: 100px; */
     border-radius: 5px;  
     background-color: white;  
 }
+
