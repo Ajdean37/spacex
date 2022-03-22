@@ -1,36 +1,48 @@
-//handler
+//application state
+let launches = [];
 
-function handleSuccess( e ) {
+
+function handleFilterUpcoming( e ) {
     e.preventDefault();
-    console.log("Success Clicked");
     
-    let successFlights = launch.filter( item => {
-        if( launch.success === true ){
+    let upcomingFlights = launches.filter( item => {
+        if( item.upcoming === true ){
           return item;
         }
       });
-      return successFlights;
+      renderRows( upcomingFlights );
 }
 
-function handleReuse( e ) {
+function handleWithArticles( e ) {
     e.preventDefault();
 
-    console.log("Reuse Clicked");
-        
-}
-
-function handleReddit( e ) {
-    e.preventDefault();
-
-    console.log("Reddit Clicked");
+    let articleFlights = launches.filter( item => {
+        if( item.links.article !== null ){
+          return item;
+        } else {
+            console.log(item);
+        }
+      });
+      renderRows( articleFlights );
 }
 
 async function handleGetData( e ) {
 
     let response = await fetch('https://api.spacexdata.com/v4/launches/');
     let data = await response.json();
-    for (const launch of data) {
-        
+    launches = [...data];
+    renderRows( launches );
+}
+
+
+//render functions
+// data: [{}]
+function renderRows( filteredLaunchData ) {
+
+    let tableRows = document.querySelectorAll('tr');
+
+    tableRows.forEach( el => el.remove() )
+    for (const launch of filteredLaunchData) {
         let date = new Date(launch.date_utc);
     
         let tableBody = document.querySelector('#table-body-target');
@@ -51,20 +63,20 @@ async function handleGetData( e ) {
         tableBody.appendChild(tr);
 
     }
-
 }
+
+
+
+
 
 //listen
 
 function readyDOM() {
     let checkboxSuccess = document.querySelector('#checkboxSuccess');
-    checkboxSuccess.addEventListener('click', handleSuccess);
-
-    let checkboxReuse = document.querySelector('#checkboxReuse');
-    checkboxReuse.addEventListener('click', handleReuse);
+    checkboxSuccess.addEventListener('click', handleFilterUpcoming);
 
     let checkboxReddit = document.querySelector('#checkboxReddit');
-    checkboxReddit.addEventListener('click', handleReddit);
+    checkboxReddit.addEventListener('click', handleWithArticles);
 
     let refreshBtn = document.querySelector('#refresh');
     refreshBtn.addEventListener('click', handleGetData);
@@ -74,4 +86,4 @@ function readyDOM() {
 
 readyDOM();
 
-// handleGetData();
+handleGetData();
