@@ -1,6 +1,7 @@
 //handler
 
 function handleSuccess( e ) {
+    e.preventDefault();
     console.log("Success Clicked");
     
     let successFlights = launch.filter( item => {
@@ -12,11 +13,15 @@ function handleSuccess( e ) {
 }
 
 function handleReuse( e ) {
+    e.preventDefault();
+
     console.log("Reuse Clicked");
         
 }
 
 function handleReddit( e ) {
+    e.preventDefault();
+
     console.log("Reddit Clicked");
 }
 
